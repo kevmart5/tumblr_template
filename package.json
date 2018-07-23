@@ -12,10 +12,12 @@
   "author": "Kevin Martinez",
   "license": "ISC",
   "devDependencies": {
-    "cash-mkdir": "^0.2.0",
     "http-server": "^0.11.1",
     "node-sass": "^4.9.2",
     "rimraf": "^2.6.2",
     "simplehttpserver": "^0.1.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7"
   }
 }
