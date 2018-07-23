@@ -4,12 +4,18 @@
   "description": "test psd tumblr",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestar": "npm run clear",
+    "start": "mkdir \"build/\" && cp src/index.html build/ && node-sass src/sass/main.scss build/css/main.css && http-server ./build -s -o",
+    "clear": "rimraf build/"
   },
   "author": "Kevin Martinez",
   "license": "ISC",
   "devDependencies": {
+    "cash-mkdir": "^0.2.0",
     "http-server": "^0.11.1",
-    "node-sass": "^4.9.2"
+    "node-sass": "^4.9.2",
+    "rimraf": "^2.6.2",
+    "simplehttpserver": "^0.1.1"
   }
 }
