@@ -1,0 +1,15 @@
+{
+  "name": "psd_practice",
+  "version": "1.0.0",
+  "description": "test psd tumblr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Martinez",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "node-sass": "^4.9.2"
+  }
+}
