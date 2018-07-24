@@ -6,19 +6,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "cp ./src/index.html ./dist/",
-    "sass": "node-sass ./src/sass/main.scss --include-path ./src/sass/ --include-path ./node_modules/bootstrap-sass/assets/stylesheets/ -o ./dist/css/",
-    "start": "http-server ./dist -s -o",
-    "clear": "rimraf build build/"
+    "server": "http-server ./dist -s -o",
+    "sass": "node-sass -w ./src/sass/main.scss --include-path ./src/sass/ --include-path ./node_modules/bootstrap/scss/ -o ./dist/css/",
+    "start": "concurrently \"npm run server\" \"npm run sass\" \"npm run watch\"",
+    "clear": "rimraf dist dist/",
+    "watch": "copy-and-watch --watch src/**/*.{html} dist/"
   },
   "author": "Kevin Martinez",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^3.6.1",
+    "copy-and-watch": "^0.1.2",
     "http-server": "^0.11.1",
     "node-sass": "^4.9.2",
     "rimraf": "^2.6.2",
     "simplehttpserver": "^0.1.1"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap": "^4.1.3"
   }
 }

@@ -1,0 +1,72 @@
+body { 
+  background-color: #d2dae6;
+}
+
+.header {
+  background-color: #36465d;
+  padding-top: 1.250em;
+  padding-bottom: 1.176em;
+}
+
+.header__logo-container {
+  padding: 0 0 0 50%;
+}
+
+.header__input-search {
+  width: 315px;
+  height: 2.125em;
+  background-color: #2d3a4e;
+  border: none;
+  border-radius: 3%;
+  padding: 0.500em 0 0.500em 0;
+  color: #c6c6c6;
+  padding-left: 1.250em;
+  background-image: url('../www/images/searchIcon.png');
+  background-repeat: no-repeat;
+  scroll-behavior: 7px 7px;
+}
+
+.header__navigation {
+}
+
+.header__navigation-icon {
+  margin-right: 7%;
+}
+
+.header__navigation-icon-last {
+  margin-right: 0%;
+}
+
+.header__navigation-icon-selected{
+  background-color: #529ecc;
+  padding: 0.2em 0.5em 0.5em 0.5em;
+  border-radius: 5%;
+}
+
+/* Main styles*/
+
+.main {
+  background-color: #d2dae6;
+  padding-top: 2.500em;
+}
+
+.main__section-content {
+  background-color: #ffffff;
+  padding: 1.500em 0 0 0;
+}
+
+.main__section-icons {
+  padding: 0 0 0 0;
+}
+
+.main__section-icons-group {
+  display: inline-block;
+}
+
+.main__section-icons-group > a {
+  display: block;
+}
+
+.main__section-icons-group > span {
+  color: #000;
+}
