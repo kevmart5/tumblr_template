@@ -5,18 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "cp ./src/index.html ./dist/",
-    "server": "http-server ./dist -s -o",
-    "sass": "node-sass -w ./src/sass/main.scss --include-path ./src/sass/ --include-path ./node_modules/bootstrap/scss/ -o ./dist/css/",
-    "start": "concurrently \"npm run server\" \"npm run sass\" \"npm run watch\"",
-    "clear": "rimraf dist dist/",
-    "watch": "copy-and-watch --watch src/**/*.{html} dist/"
+    "start": "./node_modules/.bin/gulp start"
   },
   "author": "Kevin Martinez",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.6.1",
     "copy-and-watch": "^0.1.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp-webserver": "^0.9.1",
     "http-server": "^0.11.1",
     "node-sass": "^4.9.2",
     "rimraf": "^2.6.2",
