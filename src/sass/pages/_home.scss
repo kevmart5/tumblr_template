@@ -17,7 +17,7 @@ body {
   height: 2.125em;
   background-color: #2d3a4e;
   border: none;
-  border-radius: 3%;
+  border-radius: 8px;
   padding: 0.500em 0 0.500em 0;
   color: #c6c6c6;
   padding-left: 1.250em;
@@ -40,33 +40,84 @@ body {
 .header__navigation-icon-selected{
   background-color: #529ecc;
   padding: 0.2em 0.5em 0.5em 0.5em;
-  border-radius: 5%;
+  border-radius: 8px;
 }
 
 /* Main styles*/
 
 .main {
   background-color: #d2dae6;
-  padding-top: 2.500em;
+  padding: 2.500em 0 0 0%;
+}
+
+.main__section-image-logo {
+  text-align: center;
+  img {
+    margin: 0 auto;
+  }
 }
 
 .main__section-content {
   background-color: #ffffff;
   padding: 1.500em 0 0 0;
+  border-radius: 5px;
 }
 
 .main__section-icons {
-  padding: 0 0 0 0;
+  padding: 0 0 0.5em 9%;
+  .main__section-icons-group {
+    padding-bottom: 1em;
+    display: inline-block;
+    margin-right: 6%;
+    a {
+      display: inline-block;
+    }
+  
+    span {
+      padding-top: 1em;
+      display: block;
+    }
+  }
 }
 
-.main__section-icons-group {
-  display: inline-block;
+.header__section-icons-last {
+  margin: 0;
 }
 
-.main__section-icons-group > a {
-  display: block;
+/* Aside styles*/
+
+aside {
+  background: #ffffff;
+  padding: 1.563em 0 0 2%;
+  margin-bottom: 1.875em;
+  h6 {
+    text-transform: uppercase;
+  }
 }
 
-.main__section-icons-group > span {
-  color: #000;
+.aside__blog-container {
+  border-bottom: 1px solid #c6c6c6;
+  padding-bottom: 1.250em;
+  padding-top: 1.250em;
+}
+
+.aside__blog-username {
+  p{
+    color: #c6c6c6;
+    font-size: 0.8em;
+    display: block;
+    margin: 0;
+    span {
+      font-weight: 800;
+      color: #565656;
+    }
+  }
+}
+
+.aside__blog-link {
+  padding: 0.938em 0 0.938em 0;
+  a {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
 }
