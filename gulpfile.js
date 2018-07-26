@@ -1,9 +1,9 @@
 /* Gulpfile.js */
-let gulp = require('gulp')
-let gutil =  require('gulp-util')
-let sass = require('gulp-sass')
+let gulp = require('gulp');
+let gutil =  require('gulp-util');
+let sass = require('gulp-sass');
 let webserver = require('gulp-webserver');
-let path = require('path')
+let path = require('path');
 
 /* tasks */
 // gulp.task(
