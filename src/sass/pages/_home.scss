@@ -12,6 +12,15 @@ body {
   padding: 0 0 0 50%;
 }
 
+.header__input {
+  position: relative;
+  img {
+    position: absolute;
+    left: 2%;
+    top: 0.7em;
+  }
+}
+
 .header__input-search {
   width: 315px;
   height: 2.125em;
@@ -20,14 +29,10 @@ body {
   border-radius: 8px;
   padding: 0.500em 0 0.500em 0;
   color: #c6c6c6;
-  padding-left: 1.250em;
-  background-image: url('../www/images/searchIcon.png');
-  background-repeat: no-repeat;
-  scroll-behavior: 7px 7px;
+  padding-left: 2.5em;
 }
 
-.header__navigation {
-}
+
 
 .header__navigation-icon {
   margin-right: 7%;
@@ -52,6 +57,7 @@ body {
 
 .main__section-image-logo {
   text-align: center;
+  margin-bottom: 2em;
   img {
     margin: 0 auto;
   }
@@ -61,6 +67,7 @@ body {
   background-color: #ffffff;
   padding: 1.500em 0 0 0;
   border-radius: 5px;
+  margin-bottom: 2em;
 }
 
 .main__section-icons {
@@ -82,6 +89,61 @@ body {
 
 .header__section-icons-last {
   margin: 0;
+}
+
+.main__story {
+  padding: 0 0 1em 0;
+  .main__story-title {
+    .story__title-blog {
+      p {
+        color: #c6c6c6;
+        display: inline;
+        margin-right: 5%;
+      }
+      span {
+        font-weight: 800;
+        color: #565656;
+      }
+    }
+  }
+
+  .main__story-icons {
+    padding-left: 70%;
+  }
+}
+
+.main_story-image {
+  padding: 0 0 0 0;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.story__image-caption {
+  padding: 1em 0 0 0%;
+  p {
+    color: #c6c6c6;
+  }
+}
+
+.story__notes {
+  padding: 0 0 0.5em 1%;
+  p {
+    color: #8f8f8f;
+    font-size: 0.8em;
+    font-weight: 800;
+  }
+}
+
+.story__comments-icons {
+  padding-left: 12%;
+  a {
+    margin-right: 15%;
+  }
+  .story__comments-icons-last {
+    margin-right: 0;
+  }
 }
 
 /* Aside styles*/
@@ -119,5 +181,29 @@ aside {
   a {
     text-transform: uppercase;
     font-weight: 600;
+  }
+}
+
+.aside__radar-container {
+  padding-bottom: 1.250em;
+  padding-top: 1.250em;
+}
+
+.aside__radar-image {
+  img {
+    width: 100%;
+  }
+}
+
+.radar__caption-notes {
+  color: #8f8f8f;
+  font-size: 0.8em;
+  font-weight: 800;
+}
+
+.radar__caption-links {
+  padding-left: 50%;
+  a {
+    margin-right: 15%;
   }
 }
