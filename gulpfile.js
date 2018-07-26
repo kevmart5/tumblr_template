@@ -17,9 +17,15 @@ gulp.task('styles', () => {
   return gulp.src('src/sass/main.scss')
     .pipe(sass({includePaths: [
       path.join(__dirname, 'node_modules/bootstrap/scss/'),
+      path.join(__dirname, 'node_modules/font-awesome'),
       path.join(__dirname, 'src/sass')]
       , outputStyle: 'compressed'}))
     .pipe(gulp.dest('dist/css/'))
+})
+
+gulp.task('fonts', () => {
+  return gulp.src('node_modules/font-awesome/fonts/*')
+  .pipe(gulp.dest('dist/fonts'))
 })
 
 gulp.task('html', () => {
@@ -40,4 +46,4 @@ gulp.task('server', () => {
     }))
 })
 
-gulp.task('start', ['html', 'styles', 'server', 'watch'], cb => cb)
+gulp.task('start', ['html', 'styles', 'fonts', 'server', 'watch'], cb => cb)

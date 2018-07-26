@@ -25,6 +25,7 @@
     "stylelint": "^9.4.0"
   },
   "dependencies": {
-    "bootstrap": "^4.1.3"
+    "bootstrap": "^4.1.3",
+    "font-awesome": "^4.7.0"
   }
 }
