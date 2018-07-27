@@ -10,51 +10,69 @@
 </head>
 
 <body>
-  <header class="container-fluid header">
-    <div class="row">
-      <div class="col-md-8">
-        <div class="row">
-          <div class="col-md-2">
-            <div class="header__logo-container">
-              <span>
-                <img src="../assets/images/tumblrIcon.png" alt="">
-              </span>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="header__logo-container">
+                <span class="header__tumblr-icon"></span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-10">
-            <div class="header__input">
-              <input class="header__input-search" type="text" placeholder="Search Tumblr">
-              <img src="./assets/images/searchIcon.png" alt="">
+            <div class="col-md-10">
+              <div class="header__search-section">
+                <form action="submit" class="header__search-form">
+                  <input class="header__input-search" type="text" placeholder="Search Tumblr">
+                  <i class="fa fa-search"></i>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <nav class="header__navigation">
-          <a href="#" class="header__navigation-icon">
-            <img src="./assets/images/houseOn.png" alt="">
-          </a>
-          <a href="#" class="header__navigation-icon">
-            <img src="./assets/images/locOff.png" alt="">
-          </a>
-          <a href="#" class="header__navigation-icon">
-            <img src="./assets/images/mailOff.png" alt="">
-          </a>
-          <a href="#" class="header__navigation-icon">
-            <img src="./assets/images/chatOff.png" alt="">
-          </a>
-          <a href="#" class="header__navigation-icon">
-            <img src="./assets/images/boltOff.png" alt="">
-          </a>
-          <a href="#" class="header__navigation-icon">
-            <img src="./assets/images/personOff.png" alt="">
-          </a>
-          <span class="header__navigation-icon-selected">
-            <a href="#" class="header__navigation-icon header__navigation-icon-last">
-              <img src="./assets/images/pen.png" alt="">
-            </a>
-          </span>
-        </nav>
+        <div class="col-md-5">
+          <nav class="header__navigation">
+            <ul class="header__navigation-list">
+              <li>
+                <a href="#" class="header__navigation-icon">
+                  <i class="fa fa-home nav__icon-color"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="header__navigation-icon">
+                  <i class="fa fa-compass nav__icon-color"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="header__navigation-icon">
+                  <i class="fa fa-envelope nav__icon-color"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="header__navigation-icon">
+                  <i class="fa fa-comment nav__icon-color"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="header__navigation-icon">
+                  <i class="fa fa-bolt nav__icon-color"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="header__navigation-icon">
+                  <i class="fa fa-user nav__icon-color"></i>
+                </a>
+              </li>
+              <li>
+                <span class="header__navigation-icon-selected">
+                  <a href="#" class="header__navigation-icon header__navigation-icon-last">
+                    <i class="fa fa-pencil-square nav__icon-color"></i>
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
@@ -143,8 +161,8 @@
                                 </div>
                                 <div class="col-md-4 offset-md-1">
                                   <div class="main__story-icons">
-                                    <a href="#"><img src="./assets/images/xClose.png" alt=""></a>
-                                    <a href="#"><img src="./assets/images/heary .png" alt=""></a>
+                                    <a href="#"><i class="fa fa-times"></i></a>
+                                    <a href="#"><i class="fa fa-compass"></i></a>
                                   </div>
                                 </div>
                               </div>
