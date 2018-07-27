@@ -5,13 +5,6 @@ let sass = require('gulp-sass');
 let webserver = require('gulp-webserver');
 let path = require('path');
 
-/* tasks */
-// gulp.task(
-//   name : String,
-//   deps : [] :: optional,
-//   cb : fn
-// )
-
 /* Styles task */
 gulp.task('styles', () => {
   return gulp.src('src/sass/main.scss')
@@ -19,6 +12,16 @@ gulp.task('styles', () => {
       path.join(__dirname, 'node_modules/bootstrap/scss/'),
       path.join(__dirname, 'node_modules/font-awesome'),
       path.join(__dirname, 'src/sass')]
+      , outputStyle: 'compressed'}))
+    .pipe(gulp.dest('dist/css/'))
+})
+
+gulp.task('login-styles', () => {
+  return gulp.src('src/sass/login.scss')
+    .pipe(sass({ includePaths: [ 
+      path.join(__dirname, 'node_modules/bootstrap/scss/'),
+      path.join(__dirname, 'node_modules/font-awesome'),
+      path.join(__dirname, 'src/sass') ]
       , outputStyle: 'compressed'}))
     .pipe(gulp.dest('dist/css/'))
 })
@@ -46,4 +49,4 @@ gulp.task('server', () => {
     }))
 })
 
-gulp.task('start', ['html', 'styles', 'fonts', 'server', 'watch'], cb => cb)
+gulp.task('start', ['html', 'styles', 'login-styles', 'fonts', 'server', 'watch'], cb => cb)
