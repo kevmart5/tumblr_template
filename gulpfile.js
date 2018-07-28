@@ -37,7 +37,7 @@ gulp.task('html', () => {
 })
 
 gulp.task('watch', () => {
-  gulp.watch('src/sass/**/*.scss', ['styles'])
+  gulp.watch('src/sass/**/*.scss', ['styles', 'login-styles'])
   gulp.watch('src/**/*.html', ['html'])
 })
 
