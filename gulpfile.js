@@ -36,6 +36,16 @@ gulp.task('html', () => {
     .pipe(gulp.dest('dist/'))
 })
 
+gulp.task('add-jquery', () => {
+  return gulp.src('node_modules/jquery/dist/jquery.min.js')
+  .pipe(gulp.dest('dist/vendor'))
+})
+
+gulp.task('bootstrap-plugins', () => {
+  return gulp.src('node_modules/bootstrap/js/dist/*')
+  .pipe(gulp.dest('dist/vendor/bootstrap'))
+})
+
 gulp.task('watch', () => {
   gulp.watch('src/sass/**/*.scss', ['styles', 'login-styles'])
   gulp.watch('src/**/*.html', ['html'])
@@ -49,4 +59,4 @@ gulp.task('server', () => {
     }))
 })
 
-gulp.task('start', ['html', 'styles', 'login-styles', 'fonts', 'server', 'watch'], cb => cb)
+gulp.task('start', ['html', 'styles', 'login-styles', 'fonts', 'add-jquery', 'bootstrap-plugins', 'server', 'watch'], cb => cb)
