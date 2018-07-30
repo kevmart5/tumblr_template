@@ -17,7 +17,7 @@
               <input type="text" class="form-control section--login-input" placeholder="Email">
             </div>
             <div class="form-group">
-              <button type="button" class="section--login-button" data-toggle="modal" data-target="#exampleModal">
+              <button type="button" class="section--login-button" id="btnSignIn">
                 Next
               </button>
             </div>
@@ -28,41 +28,6 @@
         </div>
       </div>
     </section>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">mikemike <i class="fa fa-angle-down"></i></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span><i class="fa fa-cogs"></i></span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container ">
-              <div class="row">
-                <div class="col-6 modal--options-border">
-                  <div class="modal--options-camara">
-                    <p>Upload photos</p>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="modal--options-globe">
-                    <p>Upload photos</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <a href="#"><i class="fa fa-twitter"></i></a> 
-            <button type="button" class="btn btn-primary" data-dismiss="modal">
-              Post <i class="fa fa-angle-down"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
   </main>
 
   <footer class="container">
@@ -83,5 +48,6 @@
   <script src="../vendor/jquery.min.js"></script>
   <script src="../vendor/bootstrap/util.js"></script>
   <script src="../vendor/bootstrap/modal.js"></script>
+  <script src="../js/index.js"></script>
 </body>
 </html>
