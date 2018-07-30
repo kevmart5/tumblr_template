@@ -59,4 +59,18 @@ gulp.task('server', () => {
     }))
 })
 
-gulp.task('start', ['html', 'styles', 'login-styles', 'fonts', 'add-jquery', 'bootstrap-plugins', 'server', 'watch'], cb => cb)
+gulp.task('deploy', 
+  ['html', 
+  'styles', 
+  'login-styles', 
+  'fonts', 
+  'add-jquery', 
+  'bootstrap-plugins'],
+  cb => cb
+)
+
+
+
+gulp.task('start', 
+['html', 'styles', 'login-styles', 'fonts', 'add-jquery', 'bootstrap-plugins', 'server', 'watch'], 
+cb => cb)
