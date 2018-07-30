@@ -14,12 +14,24 @@
         <div class="row h-100 justify-content-center align-items-center">
           <form class="col-12 col-sm-8 col-md-6">
             <div class="form-group">
-              <input type="text" class="form-control section--login-input" placeholder="Email">
+              <input type="email" class="form-control section--login-input" placeholder="Email" id="userEmail">
+              <div class="alert alert-warning feedback-alert-hide" role="alert">
+                Este campo es requerido para continuar
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control section--login-input" placeholder="Password" id="userPassword">
+              <div class="alert alert-warning feedback-alert-hide" role="alert">
+                Este campo es requerido para continuar
+              </div>
             </div>
             <div class="form-group">
               <button type="button" class="section--login-button" id="btnSignIn">
                 Next
               </button>
+            </div>
+            <div class="alert alert-danger feedback-alert-hide" role="alert" id="feedbackMessageError">
+              Correo y contraseña incorrectos.
             </div>
             <div class="form-group section--login-signUp">
               <a href="#">Sign up</a>

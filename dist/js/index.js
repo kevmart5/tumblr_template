@@ -1,5 +1,1 @@
-$(document).ready(function() {
-  $('#btnSignIn').click(function() {
-    window.location.href = '../index.html';
-  })
-});
+window.onload=function(){var e=this.document.querySelector("#btnSignIn"),a=document.querySelector("#userEmail"),o=document.querySelector("#userPassword");validateInputFields(a,o),e.addEventListener("click",function(){Login.validateCredentials(a.value,o.value)})};var validateInputFields=function(e,a){console.log(typeof userEmail)},Login={validateCredentials:function(e,a){!function(e,a){if("mkevin755@gmail.com"===e&&"123"===a){var o=document.querySelector("#feedbackMessageError");window.location.href="../index.html",o.classList.add("feedback-alert-hide")}else console.log("You shall not pass!!"),(o=document.querySelector("#feedbackMessageError")).classList.remove("feedback-alert-hide"),o.classList.add("feedback-alert-show")}(e,a)}};

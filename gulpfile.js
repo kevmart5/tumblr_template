@@ -4,6 +4,9 @@ let gutil =  require('gulp-util');
 let sass = require('gulp-sass');
 let webserver = require('gulp-webserver');
 let path = require('path');
+let eslint = require('gulp-eslint');
+let uglify = require('gulp-uglify');
+let pump = require('pump');
 
 /* Styles task */
 gulp.task('styles', () => {
@@ -37,8 +40,18 @@ gulp.task('html', () => {
 })
 
 gulp.task('javaScripts', () => {
+  pump([
+    gulp.src('src/js/*.js'),
+    uglify(),
+    gulp.dest('dist/js')
+  ], cb => cb);
+})
+
+gulp.task('es-lint', () => {
   return gulp.src('src/js/*.js')
-  .pipe(gulp.dest('dist/js'))
+  .pipe(eslint())
+  .pipe(eslint.format())
+  .pipe(eslint.failAfterError())
 })
 
 gulp.task('add-jquery', () => {
@@ -75,8 +88,15 @@ gulp.task('deploy',
   cb => cb
 )
 
-
-
 gulp.task('start', 
-['html', 'styles', 'login-styles', 'fonts', 'add-jquery', 'bootstrap-plugins', 'javaScripts', 'server', 'watch'], 
+  ['html', 
+  'styles', 
+  'login-styles', 
+  'fonts', 
+  'add-jquery', 
+  'bootstrap-plugins', 
+  'es-lint',
+  'javaScripts', 
+  'server', 
+  'watch'], 
 cb => cb)
