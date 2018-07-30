@@ -1,0 +1,101 @@
+$small: 540px;
+$medium: 720px;
+
+body {
+  background-image: url('../../assets/images/loginBackground.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+main {
+  .section--login {
+    background-image: url('../assets/images/tumblrLoginLogo.png');
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 25%;
+    padding-top: 14.25rem;
+    
+    form {
+      padding-top: 3rem;
+      .section--login-input {
+        padding: 2rem 0 2rem 5%;
+      }
+      .section--login-button {
+        width: 100%;
+        color: #ffffff;
+        border: none;
+        border-radius: 3px;
+        background-color: #ec8524;
+        margin-top: 1.625rem;
+        padding: 1.2em 0;
+      }
+
+      .section--login-signUp {
+        text-align: center;
+        padding-bottom: 1.5rem;
+        a {
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.footer--navigation {
+  padding-top: 2rem;
+  .navigation--list {
+    padding: 0 0;
+    text-align: center;
+    .navigation--list-element {
+      color: #ffffff;
+      list-style: none;
+      display: inline-block;
+      padding-right: 6%;
+    }
+  }
+}
+
+
+/*Modal styles*/
+
+.modal-body {
+  background-color: #f3f3f3;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  .modal--options-border{
+    border-right: 1px solid #d5d5d5;
+  }
+  .modal--options-camara {
+    padding: 6.25rem 0 4.25rem 0;
+    text-align: center;
+    background-image: url('../assets/images/camaraModal.png');
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 30%;
+    p {
+      padding-top: 1.5rem;
+      color: #bbbbbb;
+    }
+  }
+
+  .modal--options-globe {
+    padding: 6.25rem 0;
+    text-align: center;
+    background-image: url('../assets/images/globeModal.png');
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 25%;
+    p {
+      padding-top: 1.5rem;
+      color: #bbbbbb;
+    }
+  }
+}
+
+
+
+
+
+
