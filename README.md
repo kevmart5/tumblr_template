@@ -1,16 +1,16 @@
-# Template de tumblr 
+# tumblr template 
 
-## Descripción
+## Project info
 
-El proyecto por defecto inicia en el layout principal.En el ícono de "text" se puede mostrar el modal, pero no posee funcionalidad. En el ícono de tumblr en el header, tiene un link a la página del login. El botón de next tiene la funcionalidad de volver al layout principal.
+By default, this project initialize in the main layout. The tumblr icon place in the header section has a link to the login page. If you want to open the modal, select the **Text** button in the navigation in the main section 
 
-## Desarrollado con: 
+## Develop with: 
 
 * HTML
 * SASS
 * Bootstrap
 * JavaScript
 
-## Autores 
+## Authors
 
-* **Kevin Martínez** [Repositorio general](https://github.com/kevmart5) 
+* **Kevin Martínez** [Repositories](https://github.com/kevmart5) 
