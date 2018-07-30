@@ -259,3 +259,16 @@ aside {
     }
   }
 }
+
+.modal-footer {
+  justify-content: flex-start;
+  display: inline;
+
+  .modal--button-close {
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #565656;
+    }
+  }
+}
