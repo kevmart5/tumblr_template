@@ -223,3 +223,39 @@ aside {
     margin-right: 15%;
   }
 }
+
+/*Modal styles*/
+
+.modal-body {
+  background-color: #f3f3f3;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  .modal--options-border{
+    border-right: 1px solid #d5d5d5;
+  }
+  .modal--options-camara {
+    padding: 6.25rem 0 4.25rem 0;
+    text-align: center;
+    background-image: url('../assets/images/camaraModal.png');
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 30%;
+    p {
+      padding-top: 1.5rem;
+      color: #bbbbbb;
+    }
+  }
+
+  .modal--options-globe {
+    padding: 6.25rem 0;
+    text-align: center;
+    background-image: url('../assets/images/globeModal.png');
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 25%;
+    p {
+      padding-top: 1.5rem;
+      color: #bbbbbb;
+    }
+  }
+}
