@@ -46,12 +46,12 @@ let Login = (function () {
       window.location.href = "../index.html";
       errorMessage.classList.add('feedback-alert-hide');
     }else{
-      console.log("You shall not pass!!");
       let errorMessage = document.querySelector("#feedbackMessageError");
       errorMessage.classList.remove('feedback-alert-hide');
       setTimeout(() => {
-        errorMessage.classList.add('feedback-alert-show');
+        errorMessage.classList.add('feedback-alert-hide');
       }, 3000);
+      
     }
   };
 
@@ -59,9 +59,8 @@ let Login = (function () {
     let emptyInputs = document.querySelector('#feedbackEmptyInputs');
     emptyInputs.classList.remove('feedback-alert-hide');
     setTimeout(() => {
-      emptyInputs.classList.add('feedback-alert-fadeOut');
       emptyInputs.classList.add('feedback-alert-hide');
-    }, 5000);
+    }, 3000);
     
   }
 
