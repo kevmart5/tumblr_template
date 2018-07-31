@@ -10,7 +10,7 @@ body {
 
 main {
   .section--login {
-    background-image: url('../assets/images/tumblrLoginLogo.png');
+    background-image: url('../assets/images/tumblrLogin.png');
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-position-y: 25%;
@@ -46,35 +46,14 @@ main {
     display: none;
   }
 
-  .feedback-alert-show {
+  .feedback-alert-fadeOut {
     display: inline-block;
-    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 1s; /* Firefox < 16 */
-        -ms-animation: fadein 1s; /* Internet Explorer */
-            animation: fadein 1s;
-    
-    @keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-    }
-    
-    /* Firefox < 16 */
-    @-moz-keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-    }
-    
-    /* Safari, Chrome and Opera > 12.1 */
-    @-webkit-keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-    }
-    
-    /* Internet Explorer */
-    @-ms-keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-    }
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
   }
 }
 

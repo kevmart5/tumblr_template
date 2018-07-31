@@ -1,12 +1,40 @@
-window.onload = (function() {
+document.addEventListener("DOMContentLoaded", function(e){
+  addEventBtnLogIn();
+})
+
+let addEventBtnLogIn = function () {
+  console.log("DOM fully created");
   let btnSignIn = this.document.querySelector("#btnSignIn");
-  let userEmail = document.querySelector("#userEmail");
-  let userPassword = document.querySelector("#userPassword");
   
   btnSignIn.addEventListener("click", function() {
-    Login.validateCredentials(userEmail.value, userPassword.value);
+    Login.validateCredentials(getInputValues.userEmail(), getInputValues.userPassword());
   })
-});
+}
+
+let getInputValues = (function () {
+  let _getEmailInputValue = function () {
+    let _userEmail = document.querySelector("#userEmail");
+    return _userEmail.value;
+  }
+
+  let _getPasswordInputValue = function () {
+    let _userPassword = document.querySelector("#userPassword");
+    return _userPassword.value;
+  }
+
+  let emailValue = function () {
+    return _getEmailInputValue();
+  }
+
+  let passwordValue = function () {
+    return _getPasswordInputValue;
+  }
+
+  return {
+    userEmail: emailValue,
+    userPassword: passwordValue
+  }
+})();
 
 let Login = (function () {
   let _email = "mkevin755@gmail.com";
@@ -19,14 +47,34 @@ let Login = (function () {
       errorMessage.classList.add('feedback-alert-hide');
     }else{
       console.log("You shall not pass!!");
-      var errorMessage = document.querySelector("#feedbackMessageError");
+      let errorMessage = document.querySelector("#feedbackMessageError");
       errorMessage.classList.remove('feedback-alert-hide');
-      errorMessage.classList.add('feedback-alert-show');
+      setTimeout(() => {
+        errorMessage.classList.add('feedback-alert-show');
+      }, 3000);
     }
   };
 
+  let _emptyInputsError = function () {
+    let emptyInputs = document.querySelector('#feedbackEmptyInputs');
+    emptyInputs.classList.remove('feedback-alert-hide');
+    setTimeout(() => {
+      emptyInputs.classList.add('feedback-alert-fadeOut');
+      emptyInputs.classList.add('feedback-alert-hide');
+    }, 5000);
+    
+  }
+
+  let _checkEmptyValues = function (email, password) {
+    if(email === '' || password === '') {
+      _emptyInputsError();
+    }else {
+      _validate(email, password);
+    }
+  }
+
   let validateCredentials = function (pUserEmail, pPassword) {
-    _validate(pUserEmail, pPassword);
+    _checkEmptyValues(pUserEmail, pPassword);
   };
   
   return {

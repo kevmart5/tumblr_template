@@ -40,12 +40,14 @@ gulp.task('html', () => {
 })
 
 gulp.task('javaScripts', () => {
-  pump([
-    gulp.src('src/js/*.js'),
-    uglify(),
-    gulp.dest('dist/js')
-  ], cb => cb);
-})
+  return gulp.src('src/js/*.js')
+  .pipe(gulp.dest('dist/js/'))
+  /*pump([
+      gulp.src('src/js/*.js'),
+      uglify(),
+      gulp.dest('dist/js/')
+  ]);*/
+});
 
 gulp.task('es-lint', () => {
   return gulp.src('src/js/*.js')
@@ -82,7 +84,8 @@ gulp.task('deploy',
   ['html', 
   'styles', 
   'login-styles', 
-  'fonts', 
+  'fonts',
+  'javaScripts', 
   'add-jquery', 
   'bootstrap-plugins'],
   cb => cb
